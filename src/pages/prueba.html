@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de Mesas</title>
+<style>
+ .mesa-container {
+  display: inline-block; /* Usamos inline-block para que puedas tener varias mesas en una línea si es necesario */
+  position: relative;
+  width: 150px; /* Este será el tamaño de la mesa incluyendo asientos */
+  height: 150px;
+  margin: 20px; /* Espacio alrededor de la mesa */
+}
+
+.mesa {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la mesa exactamente en el .mesa-container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+}
+
+.asiento {
+  width: 50px;
+  height: 25px;
+  background-color: teal;
+  position: absolute;
+}
+
+.asiento.norte {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  border-radius: 50px 50px 0 0;
+}
+
+.asiento.sur {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  border-radius: 50px 50px 0 0;
+}
+
+.asiento.este {
+  right: -8%;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  border-radius: 50px 50px 0 0;
+}
+
+.asiento.oeste {
+  left: -8%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  border-radius: 50px 50px 0 0;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="mesasContainer1">
+    
+    <div id="1" class="mesa-container">
+      <div class="mesa">1</div>
+      <div class="asiento norte"></div>
+      <div class="asiento sur"></div>
+      <div class="asiento este"></div>
+      <div class="asiento oeste"></div>
+    </div>
+    
+    <div id="2" class="mesa-container">
+        <div class="mesa">2</div>
+        <div class="asiento norte"></div>
+        <div class="asiento sur"></div>
+        <div class="asiento este"></div>
+        <div class="asiento oeste"></div>
+      </div>
+      
+    <div id="3" class="mesa-container">
+        <div class="mesa">3</div>
+        <div class="asiento norte"></div>
+        <div class="asiento sur"></div>
+        <div class="asiento este"></div>
+        <div class="asiento oeste"></div>
+      </div>
+      
+    <div id="4" class="mesa-container">
+        <div class="mesa">4</div>
+        <div class="asiento norte"></div>
+        <div class="asiento sur"></div>
+        <div class="asiento este"></div>
+        <div class="asiento oeste"></div>
+      </div>
+</div>
+<div class="mesasContainer2">
+    
+    <div id="5" class="mesa-container">
+      <div class="mesa">5</div>
+      <div class="asiento norte"></div>
+      <div class="asiento sur"></div>
+      <div class="asiento este"></div>
+      <div class="asiento oeste"></div>
+    </div>
+    
+    <div id="6" class="mesa-container">
+        <div class="mesa">6</div>
+        <div class="asiento norte"></div>
+        <div class="asiento sur"></div>
+        <div class="asiento este"></div>
+        <div class="asiento oeste"></div>
+      </div>
+      
+    <div id="7" class="mesa-container">
+        <div class="mesa">7</div>
+        <div class="asiento norte"></div>
+        <div class="asiento sur"></div>
+        <div class="asiento este"></div>
+        <div class="asiento oeste"></div>
+      </div>
+      
+    <div id="8" class="mesa-container">
+        <div class="mesa">8</div>
+        <div class="asiento norte"></div>
+        <div class="asiento sur"></div>
+        <div class="asiento este"></div>
+        <div class="asiento oeste"></div>
+      </div>
+</div>
+
+<!-- Repite la estructura de .mesa-container para las mesas adicionales -->
+<script>
+    // Función para cambiar el color de la mesa y los asientos
+function toggleMesaSelection(event) {
+  // Obtener el elemento .mesa-container que fue clickeado
+  const mesaContainer = event.currentTarget;
+
+  // Cambiar el color de la mesa y los asientos dependiendo de si ya está seleccionado o no
+  const isSelected = mesaContainer.classList.contains('selected');
+
+  // Establecer los colores para el estado seleccionado
+  const mesaColor = isSelected ? 'teal' : 'yellow';
+  const asientoColor = isSelected ? 'teal' : 'yellow';
+
+  // Aplicar los colores
+  mesaContainer.querySelector('.mesa').style.backgroundColor = mesaColor;
+  mesaContainer.querySelectorAll('.asiento').forEach(asiento => {
+    asiento.style.backgroundColor = asientoColor;
+  });
+
+  // Alternar la clase selected
+  mesaContainer.classList.toggle('selected');
+}
+
+// Obtener todos los contenedores de mesas
+const mesas = document.querySelectorAll('.mesa-container');
+
+// Añadir el detector de eventos a cada mesa
+mesas.forEach(mesa => {
+  mesa.addEventListener('click', toggleMesaSelection);
+});
+
+</script>
+</body>
+</html>
