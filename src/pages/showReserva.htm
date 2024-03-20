@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/css/Styles.css">
+    <title>A.K.A</title>
+</head>
+<body class="bodyShowDetail">
+    <header class="headerContainer">
+        <nav class="headerNav">
+            <ul class="navLinks">
+                <li class="navItem">
+                    <a href="" class="navLink kanit-extrabold">
+                        Inicio
+                    </a>
+                </li>
+                <li class="navItem">
+                    <a href="" class="navLink kanit-extrabold ">
+                        A.K.A Espacios
+                    </a>
+                </li>
+                <li class="navItem">
+                    <a href="" class="navLink kanit-extrabold ">
+                        Contactanos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="RSTitleContainer">
+        <h1 class="RSTitle kanit-bold" id="RSTitle">[NOMBRE DEL SHOW]</h1>
+    </section>
+    <section class="RSFormContainer">
+        <form class="formRs" action="">
+            <div class="RSForm">
+                <div class="formContainer1">
+                    <div class="RSinputBox">
+                        <label for="name">Nombre</label>
+                        <input  type="text" placeholder="Name" name="name" id="name">
+                    </div>
+                    <div class="RSinputBox">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" placeholder="LastName" name="lastName" id="lastName">
+                    </div>
+                </div>
+                <div class="formContainer2">
+                    <div class="RSinputBox">
+                        <label for="Phone">Telefono</label>
+                        <input type="text" placeholder="Phone" name="Phone" id="Phone">
+                    </div>
+                    <div class="RSinputBox">
+                        <label for="Email">Email</label>
+                        <input type="text" placeholder="Email" name="Email" id="Email">
+                    </div>
+                </div>
+            </div>
+                <div class="RSinputBox">
+                    <label for="textarea">Comentarios</label>
+                    <textarea class="RStextArea" name="textarea" id="textarea " cols="10" rows="3">        
+                    </textarea>
+                </div>
+        </form>
+        <div class="RSticketsContainer">
+            <div class="RSCountTicketsContainer">
+                <h3 class="RSCountTicketsTitle">
+                    cantidad de tickets
+                </h3>
+                <div class="RSCounter">
+                    <span class="RSDown">
+                        <i class="fa-regular fa-circle-down"></i>
+                    </span>
+                    <div class="RSCountNum">5</div>
+                    <span class="RSup"><i class="fa-regular fa-circle-up"></i>
+                    </span>
+                </div>
+                <div class="RSdiaContainer">
+                    <h5 class="RSDiaTitle">
+                        Dia:
+                    </h5>
+                    <div class="RSDia">Viernes</div>
+                </div>
+            </div>
+            <Div class="RSInputsContainer">
+                <div class="radioBox">
+                    <label for="Compra">Comprar</label>
+                    <input type="radio" name="Compra" id="Compre">
+                </div>
+                <div class="radioBox">
+                    <label for="recerva">recervar</label>
+                    <input type="radio" name="recerva" id="recerva"> 
+                </div>
+                <div class="RSHoraContainer">
+                    <h5 class="RSHoraTitle">
+                        Hora:
+                    </h5>
+                    <div class="RSHora">20:30</div>
+                </div>
+            </Div>  
+        </div>
+    </section>
+    <h2 class="RsLugares kanit-semibold">
+        Selecciona tus lugares
+    </h2>
+    <section class="mapping">
+        <div class="mesasContainer1">
+
+            <div id="1" class="mesa-container">
+              <div class="mesa">1</div>
+              <div class="asiento norte"></div>
+              <div class="asiento sur"></div>
+              <div class="asiento este"></div>
+              <div class="asiento oeste"></div>
+            </div>
+            
+            <div id="2" class="mesa-container">
+                <div class="mesa">2</div>
+                <div class="asiento norte"></div>
+                <div class="asiento sur"></div>
+                <div class="asiento este"></div>
+                <div class="asiento oeste"></div>
+              </div>
+              
+            <div id="3" class="mesa-container">
+                <div class="mesa">3</div>
+                <div class="asiento norte"></div>
+                <div class="asiento sur"></div>
+                <div class="asiento este"></div>
+                <div class="asiento oeste"></div>
+              </div>
+              
+            <div id="4" class="mesa-container">
+                <div class="mesa">4</div>
+                <div class="asiento norte"></div>
+                <div class="asiento sur"></div>
+                <div class="asiento este"></div>
+                <div class="asiento oeste"></div>
+              </div>
+        </div>
+
+        <div class="mesasContainer2">
+            
+            <div id="5" class="mesa-container">
+              <div class="mesa">5</div>
+              <div class="asiento norte"></div>
+              <div class="asiento sur"></div>
+              <div class="asiento este"></div>
+              <div class="asiento oeste"></div>
+            </div>
+            
+            <div id="6" class="mesa-container">
+                <div class="mesa">6</div>
+                <div class="asiento norte"></div>
+                <div class="asiento sur"></div>
+                <div class="asiento este"></div>
+                <div class="asiento oeste"></div>
+              </div>
+              
+            <div id="7" class="mesa-container">
+                <div class="mesa">7</div>
+                <div class="asiento norte"></div>
+                <div class="asiento sur"></div>
+                <div class="asiento este"></div>
+                <div class="asiento oeste"></div>
+              </div>
+              
+            <div id="8" class="mesa-container">
+                <div class="mesa">8</div>
+                <div class="asiento norte"></div>
+                <div class="asiento sur"></div>
+                <div class="asiento este"></div>
+                <div class="asiento oeste"></div>
+              </div>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/src/js/index.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>
