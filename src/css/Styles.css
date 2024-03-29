@@ -967,8 +967,37 @@ input[type="date"]::-webkit-datetime-edit-year-field {
   font-size: 2rem;
 }
 
+.RSDown, .RSup {
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+  display: inline-flex; /* Alinea los íconos correctamente */
+  align-items: center; /* Centra los íconos verticalmente */
+  justify-content: center; /* Centra los íconos horizontalmente */
+  padding: 5px; /* Espaciado alrededor del ícono para aumentar el área de clic */
+  border-radius: 50%; /* Hace que el fondo (si se añade) sea circular */
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave para el efecto de clic y cambio de color */
+}
 
+.RSDown:active, .RSup:active {
+  transform: scale(0.9); /* Hace que el botón se "presione" visualmente al hacer clic */
+}
+
+/* Estilos para los íconos usando FontAwesome */
+.RsarrowDown, .RsarrowUp {
+  color: #fff; /* Color del ícono */
+  /* Añade aquí más estilos específicos para el ícono si lo necesitas */
+}
+
+/* Al pasar el mouse sobre los botones, se cambia el color del ícono */
+.RSDown:hover, .RSup:hover {
+  background-color: #000; /* Fondo ligeramente gris al pasar el mouse */
+}
+
+/* Estilos para el número del contador */
+.RSCountNum {
+  font-size: 1.5rem; /* Tamaño del texto */
+  margin: 0 10px; /* Margen a los lados para separar del ícono */
+  /* Añade más estilos aquí si lo necesitas */
+}
 
 /* fin estilos ShowReserva  */
-
 
